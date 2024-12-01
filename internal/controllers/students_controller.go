@@ -65,7 +65,7 @@ func (ctr *StudentsController) PatchStudent(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusCreated, "created")
+	c.JSON(http.StatusCreated, "updated")
 }
 func (ctr *StudentsController) DeleteStudent(c *gin.Context) {
 	id, errId := (strconv.ParseUint(c.Param("id"), 10, 0))
@@ -84,5 +84,5 @@ func (ctr *StudentsController) DeleteStudent(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, "deletd")
+	c.JSON(http.StatusOK, "deleted")
 }
